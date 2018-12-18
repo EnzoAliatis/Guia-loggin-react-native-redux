@@ -29,7 +29,7 @@ export const fetchUser = (cedula, password) => async dispatch => {
   await dispatch(requestUser())
   let q
   try {
-    q = await fetch({ query: `{studentByCedulaPass(cedula:"1310729511", password:"enzoenzo") { fullName, career, cedula, faculty, email, phone, level, itinerary, registrationNumber, typeStudent, vPaid, vGenered, subjects {id name classroom parallel teacherName teacherEmail faults scoreParcials formation days hours}}}` })
+    q = await fetch({ query: `{studentByCedulaPass(cedula:${cedula}, password:${password}) { fullName, career, cedula, faculty, email, phone, level, itinerary, registrationNumber, typeStudent, vPaid, vGenered, subjects {id name classroom parallel teacherName teacherEmail faults scoreParcials formation days hours}}}` })
   } catch (err) {
     console.log('Error al localizar con el servidor')
     return dispatch(failUser())
