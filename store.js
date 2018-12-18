@@ -7,7 +7,7 @@ import storage from 'redux-persist/lib/storage'
 import { createReactNavigationReduxMiddleware } from 'react-navigation-redux-helpers'
 import thunk from 'redux-thunk'
 
-import reducer from './reducers/index'
+import reducer from './reducers/'
 
 const persistConfig = {
   key: 'root',

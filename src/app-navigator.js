@@ -1,14 +1,16 @@
 import React from 'react'
-import { createStackNavigator } from 'react-navigation'
+import { createSwitchNavigator } from 'react-navigation'
 
 import LoginContainer from './containers/login'
+import HomeContainer from './containers/home-container'
 
-const MainStack = createStackNavigator({
+const switchNavigator = createSwitchNavigator({
   Login: {
     screen: LoginContainer
+  },
+  Home: {
+    screen: HomeContainer
   }
-}, {
-  initialRouteName: 'Login'
 })
 
-export default MainStack
+export default switchNavigator

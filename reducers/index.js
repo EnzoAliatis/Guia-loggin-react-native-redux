@@ -5,7 +5,7 @@ import navigation from './navigation'
 
 const reducer = combineReducers({
   navigation,
-  infoUser: infoUser
+  infoUser
 })
 
 export default reducer
